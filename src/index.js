@@ -14,7 +14,8 @@ const resolvers = {
   Query: {
     info: () => `This is the API of a Hackernews Clone`,
     feed: () => links,
-    link: (id) => links.filter((link) => link.id === id ? link : null),
+
+    link: (id) => links.filter((link) => link.id === id ),
   },
 
 
@@ -29,20 +30,20 @@ const resolvers = {
       return link
     },
 
-    updateLink: (root, args) => {
-
-      let link = links.filter((link) => link.id === args.id ? link : null)
-
-       link = {
-        id: args.id,
-        url: args.url,
-        description: args.description,
-      }
-
-      return link
-    }
-
-
+  //   updateLink: (root, args) => {
+  //
+  //     let link = links.filter((link) => link.id === args.id ? link : null)
+  //
+  //      link = {
+  //       id: args.id,
+  //       url: args.url,
+  //       description: args.description,
+  //     }
+  //
+  //     return link
+  //   }
+  //
+  //
   },
 
 
