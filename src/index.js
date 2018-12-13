@@ -30,20 +30,20 @@ const resolvers = {
       return link
     },
 
-  //   updateLink: (root, args) => {
-  //
-  //     let link = links.filter((link) => link.id === args.id ? link : null)
-  //
-  //      link = {
-  //       id: args.id,
-  //       url: args.url,
-  //       description: args.description,
-  //     }
-  //
-  //     return link
-  //   }
-  //
-  //
+    updateLink: (root, args) => {
+
+      let link = links.filter((link) => link.id === args.id ? link : null)
+
+       link = {
+        id: args.id,
+        url: args.url,
+        description: args.description,
+      }
+
+      return link
+    }
+
+  
   },
 
 
